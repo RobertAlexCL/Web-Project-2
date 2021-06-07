@@ -1,0 +1,4 @@
+  // replace these values with those generated in your TokBox Account
+  export const apiKey = "47213594";
+  export const sessionId = "2_MX40NzIxMzU5NH5-MTYyMjY2OTI2MDQyMn5kWlB2N3JLOGVORWUraEFhVTM4cDhXdXl-fg";
+  export const token = "T1==cGFydG5lcl9pZD00NzIxMzU5NCZzaWc9MDBiYTA3Y2M5NTdmNDcyYTMwZjZjY2Q0ZjA5NDliYWUyZTY3YTBmMzpzZXNzaW9uX2lkPTJfTVg0ME56SXhNelU1Tkg1LU1UWXlNalkyT1RJMk1EUXlNbjVrV2xCMk4zSkxPR1ZPUldVcmFFRmhWVE00Y0RoWGRYbC1mZyZjcmVhdGVfdGltZT0xNjIyNjY5MjcyJm5vbmNlPTAuNDgzNjYxOTU5NzU2OTg2MiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjI1MjYxMjc0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";

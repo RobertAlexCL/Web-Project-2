@@ -33,6 +33,7 @@ export function initializeSession(apiKey: string, sessionId: string, token: stri
         style: { buttonDisplayMode: "on" },
         width: "100%",
         height: "100%",
+       
       },
       handleError
     );
@@ -59,7 +60,7 @@ export function stopStreaming() {
 }
 
 export function streamingService(isActive: any) {
-  OT.checkScreenSharingCapability(function(response) {
+  OT.checkScreenSharingCapability(function(response: any) {
     if(!response.supported || response.extensionRegistered === false) {
       // This browser does not support screen sharing.
       console.log(' This browser does not support screen sharing')
@@ -69,8 +70,13 @@ export function streamingService(isActive: any) {
     } else {
       // Screen sharing is available. Publish the screen.
       let publisher = OT.initPublisher('screen-preview',
-        {videoSource: 'screen'},
-        function(error) {
+        {videoSource: 'screen',
+        insertMode: "append",
+        width: "100%",
+        height: "100%",
+        publishAudio: true
+        },
+        function(error: any) {
           if (error) {
             // Look at error.message to see what went wrong.
             console.log(error)
@@ -97,6 +103,7 @@ export function sendMessage(message: string){
   session.signal({
     type: 'msg',
     data: message
+   
   }, function(error: any) {
   if (error) {
     console.log('Error sending signal:', error.name, error.message);

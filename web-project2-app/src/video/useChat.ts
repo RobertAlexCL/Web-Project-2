@@ -6,6 +6,7 @@ const useSession = () => {
   const [messages, setMessages] = useState<any>([])
   //const messages = []
 
+
   useEffect(() => {
     console.log(messages)
     if (session) {
@@ -23,6 +24,7 @@ const useSession = () => {
 
       })
     }
+
     return (
       () => console.log('Cleaning')
     )

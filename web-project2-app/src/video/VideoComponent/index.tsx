@@ -9,6 +9,7 @@ import useSession from '../useChat'
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: 'gray'
+        
     },
     video: {
         position: 'relative',
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subscriber: {
         position: 'absolute',
-        left: 0,
+        right: 0,
         top: 0,
         width: '100%',
         height: '100%',
@@ -34,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
         border: '10px solid white',
         borderRadius: '3px'
     }
+
+    
+
+
 }))
 
 
@@ -59,6 +64,7 @@ const VideoComponent = () => {
                     disabled={isInterviewStarted}
                     color='primary'
                     variant="contained"
+                    
                 >
                     Start chat
                 </Button>
@@ -78,12 +84,14 @@ const VideoComponent = () => {
                 </Button>
             </Grid>
             <Grid container>
-                {messages && messages.map((item: any) => <div style={{ backgroundColor: 'red' }}> {item.message} </div>)}
+                {messages && messages.map((item: any) => <div style={{ backgroundColor: 'yellow'}}> <div  style={{height:'50px'}}></div> <div style={{width:'400px'}}></div> {item.message} </div>)}
                 <input placeholder='enter message' value={message} onChange={(e) => setMessage(e.target.value)} />
+
                 <Button
                     onClick={() => sendMessage(message)}
                     color='primary'
                     variant="contained"
+
                 >
                     Send Message
                 </Button>

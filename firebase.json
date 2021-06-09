@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "project02",
+    "public": "./web-project2-app/build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

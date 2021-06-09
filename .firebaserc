@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "web-development-course-c0bf2"
+  },
+  "targets": {
+    "web-development-course-c0bf2": {
+      "hosting": {
+        "project02": [
+          "project02"
+        ]
+      }
+    }
+  }
+}

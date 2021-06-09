@@ -9,7 +9,7 @@ import useSession from '../useChat'
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: 'gray'
-        
+
     },
     video: {
         position: 'relative',
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '3px'
     }
 
-    
+
 
 
 }))
@@ -64,7 +64,7 @@ const VideoComponent = () => {
                     disabled={isInterviewStarted}
                     color='primary'
                     variant="contained"
-                    
+
                 >
                     Start chat
                 </Button>
@@ -84,22 +84,27 @@ const VideoComponent = () => {
                 </Button>
             </Grid>
             <Grid container>
-                {messages && messages.map((item: any) => <div style={{ backgroundColor: 'yellow'}}> <div  style={{height:'50px'}}></div> <div style={{width:'400px'}}></div> {item.message} </div>)}
-                <input placeholder='enter message' value={message} onChange={(e) => setMessage(e.target.value)} />
+                <Grid item xs={12}>
+                    <Wrapper id="videos">
+                        <SubscriberWrapper id="subscriber"></SubscriberWrapper>
+                        <PublisherWrapper id="publisher"></PublisherWrapper>
+                        <Screenpreview id="screen-preview"></Screenpreview>
+                    </Wrapper>
+                    <div>
+                            <form>
+                                {messages && messages.map((item: any) => <div style={{ backgroundColor: 'white' }}> {item.message} </div>)}
+                                <input placeholder='enter message' style={{height: 25}} value={message} onChange={(e) => setMessage(e.target.value)} />
+                                <Button
+                                    onClick={() => sendMessage(message)}
+                                    color='primary'
+                                    variant="contained"
 
-                <Button
-                    onClick={() => sendMessage(message)}
-                    color='primary'
-                    variant="contained"
-
-                >
-                    Send Message
-                </Button>
-                <Wrapper id="videos">
-                    <SubscriberWrapper id="subscriber"></SubscriberWrapper>
-                    <PublisherWrapper id="publisher"></PublisherWrapper>
-                    <Screenpreview id="screen-preview"></Screenpreview>
-                </Wrapper>
+                                >
+                                    Send Message
+                                </Button>
+                            </form>
+                        </div>
+                </Grid>
             </Grid>
         </Container>
     </>)
